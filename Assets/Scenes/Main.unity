@@ -207,7 +207,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1635232551}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: TogglePlayPause
+        m_MethodName: ToggleAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -337,7 +337,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 631740567}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1635232551}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: NextSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &631740567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,7 +711,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1199843358}
   - component: {fileID: 1199843359}
-  - component: {fileID: 1199843360}
   m_Layer: 5
   m_Name: Progress Bar Slider
   m_TagString: Untagged
@@ -782,7 +793,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1635232551}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: SeekAudio
+        m_MethodName: SeekSong
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -792,51 +803,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1199843360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199843357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1635232551}
-          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-          m_MethodName: BeginSeek
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1635232551}
-          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-          m_MethodName: EndSeek
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1267203554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,10 +1252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10fc66af58f421e458885e8d27b07bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1635232550}
-  songTitleText: {fileID: 708017206}
-  progressSlider: {fileID: 1199843359}
-  playPauseButtonText: {fileID: 1459396906}
+  source: {fileID: 1635232550}
   isPlaying: 0
 --- !u!1 &1698307792
 GameObject:
